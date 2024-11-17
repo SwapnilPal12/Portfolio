@@ -13,16 +13,16 @@ const Navbar = () => {
           transition={{ duration: 0.5 }}
         >
           <div className="imgtop">
-            <img src="/public/gamer (2).png" alt="" />
+            <img src="/gamer (2).png" alt="" />
             <h3>Swapnil</h3>
           </div>
         </motion.span>
         <div className="social">
-          <a href="https://github.com/SwapnilPal12?tab=repositories">
-            <img src="/public/github (1).png" alt="" />
+          <a href="https://github.com/SwapnilPal12?tab=repositories" target="_blank" rel="noreferrer">
+            <img src="/github (1).png" alt="" />
           </a>
-          <a href="https://www.linkedin.com/in/swapnil-pal-657b8b230/">
-            <img src="/public/linkedin (1).png" alt="" />
+          <a href="https://www.linkedin.com/in/swapnil-pal-657b8b230/" target="_blank" rel="noreferrer">
+            <img src="/linkedin (1).png" alt="" />
           </a>
         </div>
       </div>

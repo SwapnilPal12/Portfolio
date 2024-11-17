@@ -5,21 +5,21 @@ import "aos/dist/aos.css";
 import "./skills.scss";
 
 const skills = [
-  { name: "HTML", icon: "/public/htmllogo.png" },
-  { name: "CSS", icon: "/public/csslogo.png" },
-  { name: "JavaScript", icon: "/public/jslogo.png" },
-  { name: "React", icon: "/public/reactlogo.png" },
-  { name: "Git", icon: "/public/gitlogo.png" },
-  { name: "Github", icon: "/public/githublogo (1).png" },
-  { name: "C", icon: "/public/clogo.png" },
-  { name: "C++", icon: "/public/cpplogo.png" },
-  { name: "Tailwind", icon: "/public/Tailwind CSS.png" },
-  { name: "Bootstrap", icon: "/public/bootstraplogo.png" },
-  { name: "MongoDB", icon: "/public/MongoDB.png" },
-  { name: "ExpressJS", icon: "/public/Express.png" },
-  { name: "NodeJS", icon: "/public/Node.js.png" },
-  { name: "Framer-Motion", icon: "/public/framerr.png"},
-  { name: "Redux", icon: "/public/Redux.png"},
+  { name: "HTML", icon: "/htmllogo.png" },
+  { name: "CSS", icon: "/csslogo.png" },
+  { name: "JavaScript", icon: "/jslogo.png" },
+  { name: "React", icon: "/reactlogo.png" },
+  { name: "Git", icon: "/gitlogo.png" },
+  { name: "Github", icon: "/githublogo (1).png" },
+  { name: "C", icon: "/clogo.png" },
+  { name: "C++", icon: "/cpplogo.png" },
+  { name: "Tailwind", icon: "/Tailwind CSS.png" },
+  { name: "Bootstrap", icon: "/bootstraplogo.png" },
+  { name: "MongoDB", icon: "/MongoDB.png" },
+  { name: "ExpressJS", icon: "/Express.png" },
+  { name: "NodeJS", icon: "/Node.js.png" },
+  { name: "Framer-Motion", icon: "/framerr.png"},
+  { name: "Redux", icon: "/Redux.png"},
 
 ];
 
