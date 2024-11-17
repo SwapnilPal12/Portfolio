@@ -1,0 +1,233 @@
+@import "/src/app.scss";
+
+$breakpoint-tablet: 1024px;
+$breakpoint-mobile: 768px;
+$breakpoint-small: 480px;
+
+.hero {
+    height: calc(100vh - 100px);
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(180deg, #0c0c1d, #111132);
+
+    .wrapper {
+        max-width: 1366px;
+        margin: auto;
+        height: 100%;
+        
+
+        @media (max-width: $breakpoint-mobile) {
+            padding: 10px;
+        }
+
+        .textContainer {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 40px;
+
+            @media (max-width: $breakpoint-tablet) {
+                width: 60%;
+                gap: 30px;
+            }
+
+            @media (max-width: $breakpoint-mobile) {
+                width: 100%;
+                height: 50%;
+                gap: 20px;
+                align-items: center;
+                text-align: center;
+                padding-top: 50px;
+            }
+
+            h2 {
+                font-size: 35px;
+                color: rebeccapurple;
+                letter-spacing: 10px;
+
+                @media (max-width: $breakpoint-mobile) {
+                    font-size: 24px;
+                    letter-spacing: 8px;
+                }
+
+                @media (max-width: $breakpoint-small) {
+                    font-size: 20px;
+                    letter-spacing: 6px;
+                }
+            }
+
+            h1 {
+                font-size: 88px;
+
+                @media (max-width: $breakpoint-tablet) {
+                    font-size: 64px;
+                }
+
+                @media (max-width: $breakpoint-mobile) {
+                    font-size: 36px;
+                }
+
+                @media (max-width: $breakpoint-small) {
+                    font-size: 28px;
+                }
+            }
+
+            .buttons {
+                display: flex;
+                gap: 40px;
+                justify-content: flex-start;
+                align-items: center;
+
+                @media (max-width: $breakpoint-mobile) {
+                    justify-content: center;
+                    gap: 20px;
+                }
+
+                a {
+                    text-decoration: none;
+                }
+            }
+
+            .button {
+                margin: 0;
+                height: auto;
+                background: transparent;
+                padding: 0;
+                border: none;
+                cursor: pointer;
+
+                @media (max-width: $breakpoint-mobile) {
+                    margin-bottom: 0;
+                }
+            }
+            
+            .button {
+                --border-right: 6px;
+                --text-stroke-color: rgba(255,255,255,0.6);
+                --animation-color: orange;
+                --fs-size: 2em;
+                letter-spacing: 3px;
+                text-decoration: none;
+                font-size: var(--fs-size);
+                font-family: "Arial";
+                position: relative;
+                text-transform: uppercase;
+                color: transparent;
+                -webkit-text-stroke: 1px var(--text-stroke-color);
+
+                @media (max-width: $breakpoint-tablet) {
+                    --fs-size: 1.2em;
+                }
+
+                @media (max-width: $breakpoint-mobile) {
+                    --fs-size: 1em;
+                }
+
+                @media (max-width: $breakpoint-small) {
+                    --fs-size: 0.9em;
+                }
+            }
+
+            .hover-text {
+                position: absolute;
+                box-sizing: border-box;
+                content: attr(data-text);
+                color: var(--animation-color);
+                width: 0%;
+                inset: 0;
+                border-right: var(--border-right) solid var(--animation-color);
+                overflow: hidden;
+                transition: 0.5s;
+                -webkit-text-stroke: 1px var(--animation-color);
+            }
+
+            .button:hover .hover-text {
+                width: 100%;
+                filter: drop-shadow(0 0 23px var(--animation-color))
+            }
+
+            img {
+                width: 50px;
+                height: 50px;
+
+                @media (max-width: $breakpoint-mobile) {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+
+    .slidingTextContainer {
+        position: absolute;
+        font-size: 50vh;
+        word-spacing: 250px;
+        bottom: -120px;
+        white-space: nowrap;
+        color: #ffffff09;
+        user-select: none;
+        pointer-events: none;
+        font-weight: bold;
+
+        @media (max-width: $breakpoint-tablet) {
+            font-size: 30vh;
+            word-spacing: 150px;
+            bottom: -90px;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            font-size: 50vh;
+            word-spacing: 100px;
+            bottom: -40px;
+        }
+
+        @media (max-width: $breakpoint-small) {
+            font-size: 50vh;
+            word-spacing: 50px;
+            bottom: -120px;
+        }
+    }
+
+    .imageContainer {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        right: 0;
+        z-index: 2;
+
+        @media (max-width: $breakpoint-mobile) {
+            height: 50%;
+            width: 100%;
+            top: unset;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        img {
+            width: 900px;
+            height: 900px;
+            object-fit: contain;
+            mix-blend-mode: luminosity;
+            filter: contrast(1.1);
+
+            @media (max-width: $breakpoint-tablet) {
+                width: 700px;
+                height: 700px;
+            }
+
+            @media (max-width: $breakpoint-mobile) {
+                width: 500px;
+                height: 500px;
+            }
+
+            @media (max-width: $breakpoint-small) {
+                width: 400px;
+                height: 400px;
+            }
+        }
+    }
+}
