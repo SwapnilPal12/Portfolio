@@ -12,23 +12,39 @@
         height: 100%;
         padding: 0 20px;
 
+        // Existing mobile styles
         @include mobile {
             justify-content: flex-end;
             padding: 20px;
         }
 
-        // Tablet styles (768px - 1024px)
+        // Existing tablet styles
         @media screen and (min-width: 768px) and (max-width: 1024px) {
             max-width: 90%;
             padding: 0 15px;
             justify-content: flex-end;
         }
 
-        // Small desktop styles (1025px - 1365px)
-        @media screen and (min-width: 1025px) and (max-width: 1365px) {
-            max-width: 95%;
+        // Enhanced desktop/laptop styles
+        @media screen and (min-width: 1025px) {
+            max-width: 85%; // Slightly narrower container for better readability
+            padding: 0 40px; // Increased padding for larger screens
+            height: 90px; // Slightly reduced height for better proportions
+
+            // Smooth transitions for responsive adjustments
+            transition: all 0.3s ease-in-out;
+
+            // Adjust for very large screens
+            @media screen and (min-width: 1600px) {
+                max-width: 1400px;
+            }
+
+            // Adjust for medium-large screens
+            @media screen and (min-width: 1366px) and (max-width: 1599px) {
+                max-width: 1200px;
+            }
         }
-      
+
         span {
             font-weight: bold;
 
@@ -39,28 +55,40 @@
             @media screen and (min-width: 768px) and (max-width: 1024px) {
                 display: none;
             }
+
+            // Enhanced desktop styles for span
+            @media screen and (min-width: 1025px) {
+                flex: 1;
+                margin-right: 20px;
+            }
         }
 
         .social {
             display: flex;
             gap: 20px;
 
+            // Existing mobile styles
             @media screen and (max-width: 480px) {
                 gap: 15px;
+                img {
+                    width: 28px; // Slightly larger icons for desktop
+                    height: 28px;
+                }    
             }
 
-            img {
-                width: 30px;
-                height: 30px;
+            // Enhanced desktop styles
+            @media screen and (min-width: 1025px) {
+                gap: 25px; // Slightly larger gap for desktop
+                margin-left: 30px; // Add some spacing from other elements
 
-                @media screen and (max-width: 480px) {
-                    width: 25px;
-                    height: 25px;
-                }
+                img {
+                    width: 32px; // Slightly larger icons for desktop
+                    height: 32px;
+                    transition: transform 0.2s ease;
 
-                @media screen and (min-width: 481px) and (max-width: 767px) {
-                    width: 28px;
-                    height: 28px;
+                    &:hover {
+                        transform: scale(1.1); // Subtle hover effect
+                    }
                 }
             }
         }
@@ -70,12 +98,12 @@
             gap: 15%;
             width: 100%;
 
-            // Hide imgtop specifically for 768px - 1024px
+            // Existing tablet styles
             @media screen and (min-width: 768px) and (max-width: 1024px) {
                 display: none;
             }
 
-            // Styles for screens smaller than 768px
+            // Existing mobile styles
             @media screen and (max-width: 767px) {
                 gap: 10%;
                 
@@ -89,15 +117,24 @@
                 }
             }
 
-            // Styles for larger screens (above 1024px)
+            // Enhanced desktop styles
             @media screen and (min-width: 1025px) {
+                gap: 12px; // More precise gap
+                width: auto; // Let content determine width
+                align-items: center;
+
                 img {
-                    width: auto;
-                    height: auto;
+                    width: 40px; // Fixed size for consistency
+                    height: 40px;
+                    object-fit: contain;
                 }
 
                 h3 {
-                    font-size: 1.3em;
+                    font-size: 1.4em;
+                    font-weight: 600;
+                    white-space: nowrap; // Prevent text wrapping
+                    margin: 0;
+                    padding-left: 8px;
                 }
             }
         }
