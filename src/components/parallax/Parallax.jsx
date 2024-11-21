@@ -37,7 +37,7 @@ const Parallax = ({ type }) => {
           })`,
         }}
       ></motion.div>
-      <motion.div style={{ x: yBg }} className="stars"></motion.div>
+      <motion.div  className="stars"></motion.div>
     </div>
   );
 };

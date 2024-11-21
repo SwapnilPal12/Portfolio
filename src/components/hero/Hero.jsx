@@ -86,7 +86,7 @@ const Hero = () => {
         C++ ReactJS MongoDB NodeJS ExpressJS Framer-Motion
       </motion.div>
       <div className="imageContainer">
-        <img src="/Picsart_24-11-15_14-27-21-264.png" alt="" />
+        <img src="/whhite.png" alt="" />
       </div>
     </div>
   );
