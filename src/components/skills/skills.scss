@@ -66,6 +66,7 @@
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 2rem;
+        padding-bottom: 5rem;
 
         @media (max-width: 1400px) {
             grid-template-columns: repeat(3, 1fr); // Changed to 3 columns
