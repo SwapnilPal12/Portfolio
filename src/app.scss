@@ -11,11 +11,22 @@ html{
 section{
     height: 100vh;
     width: 100vw;
-    scroll-snap-type: proximity;
     overflow: hidden;
+
+    @media screen and (max-width: 1024px) {
+      scroll-snap-align: center;
+    }
+
+    @media screen and (max-width: 768px) {
+      scroll-snap-align: center;
+    }
+
+    @media screen and (max-width: 480px) {
+      scroll-snap-align: center;
+    }
 }
 body{
-    background: linear-gradient(180deg, #0c0c1d, #111132);
+    background-color: #212121;
     color: lightgray;
     overflow-x: hidden;
 }

@@ -8,7 +8,7 @@ $breakpoint-small: 480px;
     height: calc(100vh - 100px);
     overflow: hidden;
     position: relative;
-    background: linear-gradient(180deg, #0c0c1d, #111132);
+    background-color: #212121;
 
     .wrapper {
         padding-left: 15rem;
@@ -44,7 +44,7 @@ $breakpoint-small: 480px;
 
             h2 {
                 font-size: 35px;
-                color: rebeccapurple;
+                color: orange;
                 letter-spacing: 10px;
 
                 @media (max-width: $breakpoint-mobile) {
