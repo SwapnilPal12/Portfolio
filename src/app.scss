@@ -2,6 +2,17 @@ html{
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #212121;
+}
+
+::-webkit-scrollbar-thumb {
+  background: orange;
+}
 *{
     padding: 0;
     margin: 0;
